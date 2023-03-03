@@ -105,7 +105,7 @@ public class AccountController {
             return "index";
         }
         t.setTransactionId(UUID.randomUUID().toString().substring(0, 8));
-        // logAuditSvc.logTransaction(t);
+        logAuditSvc.logTransaction(t);
         model.addAttribute("transfer", t);
         model.addAttribute("fromAccString", accSvc.accExist(t.getFromAccId()).getAccountString());
         model.addAttribute("toAccString", accSvc.accExist(t.getToAccId()).getAccountString());

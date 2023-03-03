@@ -9,12 +9,12 @@ import tfip.nus.iss.pafassessment.model.Transfer;
 @Service
 public class LogAuditService {
 
-    // @Autowired
-    // private RedisTemplate<String, Object> redisTemplate;
+    @Autowired
+    private RedisTemplate<String, Object> redisTemplate;
 
-    // public void logTransaction(final Transfer transfer) {
-    // redisTemplate.opsForValue().set(transfer.getTransactionId(),
-    // Transfer.toJson(transfer).toString());
-    // }
+    public void logTransaction(final Transfer transfer) {
+        redisTemplate.opsForValue().set(transfer.getTransactionId(),
+                Transfer.toJson(transfer).toString());
+    }
 
 }
