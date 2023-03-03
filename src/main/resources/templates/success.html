@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Your transfer of $<span data-th-text="${transfer.transferAmount}"></span> from <br>
+    <span data-th-text="${fromAccString}"></span> to <br>
+    <span data-th-text="${toAccString}"></span> to <br>
+    is successful. <br><br>
+
+    Transaction id is <span data-th-text="${transfer.transactionId}"></span>
+</body>
+</html>
